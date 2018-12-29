@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_column="3"
+    tools:context=".MainActivity">
+
+    <com.liangtg.simplehan.widget.HanZiView
+        android:layout_width="10mm"
+        android:layout_height="0dp"
+        android:text="梁" />
+
+    <com.liangtg.simplehan.widget.HanZiView
+        android:layout_width="10mm"
+        android:layout_height="0dp"
+        android:text="天" />
+
+    <com.liangtg.simplehan.widget.HanZiView
+        android:layout_width="10mm"
+        android:layout_height="0dp"
+        android:text="刚" />
+</GridLayout>
