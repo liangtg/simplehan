@@ -20,6 +20,12 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    api "androidx.appcompat:appcompat:1.0.0"
+    api "androidx.cardview:cardview:1.0.0"
+    api "com.google.android.material:material:1.1.0-alpha02"
+    api "androidx.transition:transition:1.0.0"
+    api "androidx.recyclerview:recyclerview:1.0.0"
+    api 'androidx.constraintlayout:constraintlayout:1.1.2'
+    api 'androidx.vectordrawable:vectordrawable:1.0.0'
 }

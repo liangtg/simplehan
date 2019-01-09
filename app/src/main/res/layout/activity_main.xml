@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_column="3"
+    android:background="@color/transparent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.liangtg.simplehan.widget.HanZiView
-        android:layout_width="10mm"
-        android:layout_height="0dp"
-        android:text="梁" />
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <com.liangtg.simplehan.widget.HanZiView
-        android:layout_width="10mm"
-        android:layout_height="0dp"
-        android:text="天" />
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/app_name"></androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <com.liangtg.simplehan.widget.HanZiView
-        android:layout_width="10mm"
-        android:layout_height="0dp"
-        android:text="刚" />
-</GridLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
