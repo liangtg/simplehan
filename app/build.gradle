@@ -28,4 +28,7 @@ dependencies {
     api "androidx.recyclerview:recyclerview:1.0.0"
     api 'androidx.constraintlayout:constraintlayout:1.1.2'
     api 'androidx.vectordrawable:vectordrawable:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha1'
+    implementation 'github.liangtg:base:1.0'
+    implementation 'com.google.android:flexbox:1.1.0'
 }
