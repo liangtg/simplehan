@@ -11,6 +11,7 @@ import com.github.liangtg.base.BaseViewHolder;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
 import com.liangtg.simplehan.widget.HanZiView;
+import com.liangtg.simplehan.widget.MethodTime;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -82,7 +83,10 @@ public class CommonCharacterFragment extends BaseFragment {
         @NonNull
         @Override
         public AdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new AdapterViewHolder(getLayoutInflater().inflate(R.layout.item_hanzi, parent, false));
+            MethodTime m = MethodTime.obtain().tag("onCreateViewHolder");
+            View view = getLayoutInflater().inflate(R.layout.item_hanzi, parent, false);
+            m.end();
+            return new AdapterViewHolder(view);
         }
 
         @Override
