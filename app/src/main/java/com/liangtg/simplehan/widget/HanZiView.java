@@ -96,7 +96,7 @@ public class HanZiView extends View {
 
     private void init() {
         MethodTime m = MethodTime.obtain().tag("init");
-        textPaint.setTextAlign(Paint.Align.CENTER);
+        textPaint.setTextAlign(Paint.Align.LEFT);
         textPaint.setDither(true);
         textPaint.setTypeface(getTypeFace("tyzks.ttf"));
         textPaint.setColor(0xFF000000);
@@ -206,7 +206,7 @@ public class HanZiView extends View {
         MethodTime m = MethodTime.obtain().tag("drawText");
         float x = textPoint.x - textBounds.width() / 2 - textBounds.left;
         float y = textPoint.y - textBounds.height() / 2 - textBounds.top;
-        canvas.drawText(text, textPoint.x, textPoint.y, textPaint);
+        canvas.drawText(text, x, y, textPaint);
         m.end();
     }
 }

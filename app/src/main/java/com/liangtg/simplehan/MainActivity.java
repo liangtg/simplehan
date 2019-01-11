@@ -5,6 +5,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
+import com.pgyersdk.update.PgyUpdateManager;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         show(commonCharacterFragment);
+        new PgyUpdateManager.Builder().register();
     }
 
     @Override

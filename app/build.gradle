@@ -6,8 +6,8 @@ android {
         applicationId "com.liangtg.simplehan"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -19,16 +19,17 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
-    api "androidx.appcompat:appcompat:1.0.0"
-    api "androidx.cardview:cardview:1.0.0"
-    api "com.google.android.material:material:1.1.0-alpha02"
-    api "androidx.transition:transition:1.0.0"
-    api "androidx.recyclerview:recyclerview:1.0.0"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+    api 'androidx.appcompat:appcompat:1.0.0'
+    api 'androidx.cardview:cardview:1.0.0'
+    api 'com.google.android.material:material:1.1.0-alpha02'
+    api 'androidx.transition:transition:1.0.0'
+    api 'androidx.recyclerview:recyclerview:1.0.0'
     api 'androidx.constraintlayout:constraintlayout:1.1.2'
     api 'androidx.vectordrawable:vectordrawable:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha1'
     implementation 'github.liangtg:base:1.0'
     implementation 'com.google.android:flexbox:1.1.0'
+    implementation project(':pgyer')
 }

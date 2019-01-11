@@ -1,9 +1,7 @@
 package com.liangtg.simplehan;
 
-import android.os.Build;
-import android.view.Choreographer;
-
 import com.github.liangtg.base.BaseApplication;
+import com.pgyersdk.crash.PgyCrashManager;
 
 /**
  * @ProjectName: simplehan
@@ -19,12 +17,6 @@ public class IApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() {
-                @Override
-                public void doFrame(long frameTimeNanos) {
-                }
-            });
-        }
+        PgyCrashManager.register();
     }
 }
